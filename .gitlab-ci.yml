@@ -11,7 +11,7 @@ before_script:
   - export DOCKER_IMAGE=${DOCKER_IMAGE:-${CI_REGISTRY}/${CI_PROJECT_PATH}}
   - |
     if [ "${DOCKER_IMAGE}" = "/" ]; then
-      export DOCKER_IMAGE=sameersbn/gitlab
+      export DOCKER_IMAGE=bastouf/docker-gitlab
     fi
 
 docker:build:
