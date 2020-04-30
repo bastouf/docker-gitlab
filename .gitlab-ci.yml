@@ -13,6 +13,7 @@ before_script:
     if [ "${DOCKER_IMAGE}" = "/" ]; then
       export DOCKER_IMAGE=bastouf/docker-gitlab
     fi
+  - echo ${DOCKER_IMAGE}
 
 docker:build:
   stage: build
