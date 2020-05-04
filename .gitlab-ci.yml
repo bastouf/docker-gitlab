@@ -13,16 +13,12 @@ before_script:
     if [ "${DOCKER_IMAGE}" = "/" ]; then
       export DOCKER_IMAGE=bastouf/docker-gitlab
     fi
-  - echo ${DOCKER_IMAGE}
 
 docker:build:
   stage: build
   only:
     - master
   script:
-    - echo "registry URL $CI_REGISTRY"
-    - echo "docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}"
-    - echo "docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY"
     - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
     - docker build
       --pull

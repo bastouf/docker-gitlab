@@ -6,6 +6,9 @@ socket_path = "{{GITALY_SOCKET_PATH}}"
 # listen_addr = "localhost:9999"
 #
 
+# The directory where Gitaly's executables are stored
+bin_dir = "/usr/local/bin/"
+
 # # Optional: export metrics via Prometheus
 # prometheus_listen_addr = "localhost:9236"
 #
