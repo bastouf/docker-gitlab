@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: gitlab
-        image: registry.bast.me/bastouf/docker-gitlab:12.10.5
+        image: registry.bast.me/bastouf/docker-gitlab:12.10.6
         env:
         - name: TZ
           value: Asia/Kolkata
