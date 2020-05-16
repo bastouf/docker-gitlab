@@ -27,3 +27,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: bastouf/docker-gitlab
         tags_with_ref: true
+        path: ../
