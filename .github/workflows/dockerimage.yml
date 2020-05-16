@@ -18,7 +18,7 @@ jobs:
   #     run: docker build . --file Dockerfile --tag bastouf/docker-gitlab:$(date +%s)
 
   build-push:
-    runs-on: docker-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: docker/build-push-action@v1
       with:
