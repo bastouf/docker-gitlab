@@ -22,7 +22,7 @@ services:
 
   gitlab:
     restart: always
-    image: sameersbn/gitlab:8.12.7
+    image: registry.bast.me/bastouf/docker-gitlab:8.12.7
     volumes:
     - gitlab-data:/home/git/data:Z
     - gitlab-logs:/var/log/gitlab

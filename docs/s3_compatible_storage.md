@@ -91,7 +91,7 @@ services:
 
   gitlab:
     restart: always
-    #image: sameersbn/gitlab:8.16.4
+    #image: registry.bast.me/bastouf/docker-gitlab:8.16.4
     build: .
     depends_on:
     - redis
@@ -219,7 +219,7 @@ services:
 Execute the rake task with a removeable container.
 ```bash
 docker run --name gitlab -it --rm [OPTIONS] \
-    sameersbn/gitlab:8.16.4 app:rake gitlab:backup:create
+    registry.bast.me/bastouf/docker-gitlab:8.16.4 app:rake gitlab:backup:create
 ```
 ## Restoring Backups
 
@@ -227,7 +227,7 @@ Execute the rake task to restore a backup. Make sure you run the container in in
 
 ```bash
 docker run --name gitlab -it --rm [OPTIONS] \
-    sameersbn/gitlab:8.16.4 app:rake gitlab:backup:restore
+    registry.bast.me/bastouf/docker-gitlab:8.16.4 app:rake gitlab:backup:restore
 ```
 
 The list of all available backups will be displayed in reverse chronological order. Select the backup you want to restore and continue.
@@ -236,5 +236,5 @@ To avoid user interaction in the restore operation, specify the timestamp of the
 
 ```bash
 docker run --name gitlab -it --rm [OPTIONS] \
-    sameersbn/gitlab:8.16.4 app:rake gitlab:backup:restore BACKUP=1417624827
+    registry.bast.me/bastouf/docker-gitlab:8.16.4 app:rake gitlab:backup:restore BACKUP=1417624827
 ```

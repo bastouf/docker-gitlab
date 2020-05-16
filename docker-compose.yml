@@ -22,7 +22,7 @@ services:
 
   gitlab:
     restart: always
-    image: registry.bast.me/bastouf/docker-gitlab:12.10.2
+    image: sameersbn/gitlab:12.10.3
     depends_on:
     - redis
     - postgresql
